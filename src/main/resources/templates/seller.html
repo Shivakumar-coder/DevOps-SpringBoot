@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/seller.css" />
+    <title>Seller</title>
+  </head>
+  <style>
+    body {
+      background-image: url("pictures/bg4.jpg");
+      min-height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+  <form th:action="@{/addJewel}" method="POST">
+    <div class="header">
+      <div class="htext"><h1>Welcome to Torry Harris Jewelleries </h1></div>
+      <div class="logout">
+        <a th:href = "@{/sellerLogin}">Log Out</a>
+      </div>
+    </div>
+    <main class="main">
+      <div class="items">
+        <h2>Add Items</h2>
+        <div class="item_details">
+          <div class="metal">
+            <label>Metal</label>
+            <!-- <input type="text" id="gprice" class="price_input" name="jewel_metal"/> -->
+            <select id="gprice" class="price_input" name="jewel_metal">
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="diamond">Diamond</option>   
+            <option value="platinum">Platinum</option> 
+            </select>
+          </div>
+          <div class="jewel-type">
+            <label>Type of Jewel:</label>
+           <!-- <input type="text" id="silprice" class="price_input" name="jewel_type"/> -->
+            <select input type="text" id="silprice" class="price_input" name="jewel_type">
+            <option value="ring">Ring</option>
+            <option value="chain">Chain/Neckace</option>
+            <option value="earring">Earring</option>    
+            </select>
+          </div>
+          <div class="jewel-weight">
+            <label>Weight:</label>
+            <input type="text" id="dimprice" class="price_input" name="weight"/>
+          </div>
+          <div class="jewel-price">
+            <label>Price:</label>
+            <input type="text" id="pltprice" class="price_input"  name="price" />
+          </div>
+          <div class="item_update">
+            <input type="submit" value="addJewel" id="add_item">
+          </div>
+          
+        </div>
+      </div>
+      <div class="item-table">
+      
+      <table>
+      <tr>
+      <thead>
+          <th>Jewel Id</th>
+          <th>Jewel Element</th>
+          <th>Jewel type</th>
+          <th>Price</th>
+          <th>Weight</th>
+          
+       </tr> 
+       </thead> 
+        <tbody>        
+            <tr th:each="jewels : ${jewelList}"> 
+            	<td th:text="${jewels.jewel_id}"class="border">Id</td>
+            	<td th:text="${jewels.jewel_metal}"class="border">Element</td>
+                <td th:text="${jewels.jewel_type}"class="border">Type</td>
+                <td th:text="${jewels.price}"class="border">price</td>
+                <td th:text="${jewels.weight}" class="border">weight</td>        
+               <td>
+                  <a class="buy"  th:href="@{'/delete/' + ${jewels.jewel_id}}">&nbsp;&nbsp;Delete&nbsp;&nbsp;</a>
+                </td>
+             
+            </tr>
+        </tbody> 
+      </table>
+
+      </div>
+      
+    </main>
+  </form>
+  </body>
+</html>

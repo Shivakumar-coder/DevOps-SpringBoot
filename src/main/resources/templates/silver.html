@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/customer.css" />
+    <title>Online Jewellry Shop</title>
+  </head>
+  <style>
+    body {
+      background-image: url("pictures/bg3.jpg");
+      min-height: 100vh;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <form method="post" action="customer/auth">
+      <div class="header">
+        <div class="htext"><h1>Welcome to Torry Harris Jewelleries </h1></div>
+        <div class="logout">
+          <a th:href = "@{/customerLogin}">Log Out</a>
+        </div>
+      </div>
+      <main class="main_menu">
+        <div class="topnav">
+          <a th:href = "@{/gold}">Gold</a>
+          <a class="active" href="#">Silver</a>
+          <a th:href = "@{/diamond}">Diamond</a>
+        <a th:href = "@{/platinum}">Platinum</a>        
+        <a th:href = "@{/about}">About</a>
+        </div>
+        <div class="category">
+          <h2>Shop By category</h2>
+          <div class="cat_content">
+          
+            <div class="cat-item" th:onclick="'location.href=\''+@{/shop(type='silver-ring')}+'\''">
+              <img src="pictures/products/silver ring.jpg" alt="" />
+              <label>Ring</label>
+            </div>
+          
+            <div class="cat-item" th:onclick="'location.href=\''+@{/shop(type='silver-chain')}+'\''">
+              <img src="pictures/products/silver chain.jpg" alt="" />
+              <label>necklace</label>
+            </div>
+            <div class="cat-item" th:onclick="'location.href=\''+@{/shop(type='silver-earring')}+'\''"  >
+              <img src="pictures/products/silver earing.jpg" alt="" height=6rem />
+              <label>Earring</label>
+          </div>
+        </div>
+      </main>
+    </form>
+  </body>
+</html>

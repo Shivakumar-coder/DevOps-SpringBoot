@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <title>Sign Up</title>
+  </head>
+  <style>
+    body {
+      background-image: url("pictures/bg5.jpg");
+      min-height: 100vh;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+  <form th:action="@{/sellerRegister}" method="POST">
+    <main class="signup">
+      <h1 class="header">Sign Up</h1>
+      <div class="contents">
+        <div class="uname">
+          <label> User Name</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="password">
+          <label> Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="re-password">
+          <label>Re enter Password</label>
+          <input type="password" name="repassword" id="re-password" />
+        </div>
+        <div class="email">
+          <label> E-mail</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="cel-number">
+          <label> Cell </label>
+          <input type="text" name="cell" id="cell" />
+        </div>
+        <div class="button">
+            <input type="submit" value="signup" class="button">
+        </div>
+      </div>
+    </main>
+  </form>
+  </body>
+</html>

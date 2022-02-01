@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles/list.css" >
+    <title>Purchase Items</title>
+</head>
+<style>
+    body{
+    background-image: url("pictures/bg8.jpg");
+    min-height: 100vh;    
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size:cover;   
+}
+</style>
+<body>
+<h1 style="color:white" >Torry Harris Jewellers</h1>
+<form>
+<main class="sale-main">
+<table>
+      <tr>
+      <thead>       
+          <th>Weight</th>
+           <th>Price</th>          
+       </tr> 
+       </thead> 
+        <tbody>        
+            <tr> 
+            	<td th:text="${weight}"class="border">Element</td>
+                <td th:text="${price}"class="border">Type</td>                                   
+            </tr>
+        </tbody> 
+      </table>
+      <input class="button" type="button" value="Proceed To Pay" th:onclick="'location.href=\''+@{/payment}+'\''">
+       <input class="button" type="button" value="Back" onclick="history.back()">
+</main>
+</form>
+</body>
+</html>

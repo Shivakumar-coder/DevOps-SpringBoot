@@ -1,0 +1,163 @@
+.main {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  color: white;
+}
+.htext {
+  width: 100%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction:row-reverse;
+  align-items:flex-end;
+  
+}
+.logout {
+  margin-top: 8px;
+  width: 20%;
+  height: 3rem;
+  background-color: rgb(253, 147, 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.logout a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.logout:hover {
+  background-color: rgb(216, 218, 247);
+  color: black;
+}
+
+.price,
+.items,
+.remove_items {
+  width: 90%;
+  height: 8rem;
+  margin-bottom: 1rem;
+  /* background-color:rgba(11, 80, 227, 0.3) ; */
+  background: linear-gradient(
+    to top left,
+    rgba(5, 53, 141, 0.61),
+    rgba(53, 26, 5, 0.438),
+    rgba(20, 148, 47, 0.4),
+    rgba(0, 0, 0, 0.6)
+  );
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.price:hover {
+  transform: scale(1.06);
+}
+.items:hover {
+  transform: scale(1.06);
+}
+.item_details:hover {
+  transform: scale(1.06);
+}
+
+h2 {
+  color: #fd9308;
+}
+.price_content,
+.item_details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+label {
+  color: #cdf9ff;
+  font-weight: 600;
+}
+.price_input {
+  width: 4rem;
+  height: 2rem;
+  border-radius: 15px;
+  border-style: none;
+  opacity: 80%;
+}
+#setprice,
+#add_item,
+#rm_item {
+  width: 7rem;
+  height: 2.5rem;
+  background-color: #fd9308;
+  border-style: none;
+  border-radius: 25px;
+  color: black;
+  font-weight: 600;
+}
+#setprice:hover {
+  background-color: #05e097;
+}
+#add_item:hover {
+  background-color: #05e097;
+}
+#rm_item:hover {
+  background-color: #05e097;
+}
+
+.item-table{
+	 width: 90%;
+	background: linear-gradient(to top left, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+
+	
+}
+table {
+	
+  border: none;
+  overflow-wrap: break-word;
+  width: 100%;
+  
+}
+
+th {
+  color: white;
+  border: 1px solid #e08d0f;
+  border-bottom: solid 1px #e08d0f;
+}
+tr {
+  color: #e08d0f;
+  font-weight: 600;
+  text-align: center;
+}
+td{
+  border-bottom: #e08d0f solid 1px;
+}
+.border {
+  border-right: 1px solid white;
+}
+.button{
+  margin-top: 2rem;  
+  align-self: center;
+  width: 8rem;
+  height: 2rem;
+  background-color: #e08d0f;
+  font-weight: 600;
+  border:none;
+  border-radius: 25px;
+  
+}
+.buy{
+	text-decoration: none;
+	background-color: #e08d0f;
+	border:none;
+	border-radius: 15px;
+	font-weight:400;
+	color:black;
+	
+}
+

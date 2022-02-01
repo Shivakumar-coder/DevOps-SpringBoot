@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/istyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+    <title>Jewelry Management</title>
+</head>
+<style>
+    body{
+    background-image: url("pictures/bg1.jpg");
+    min-height: 100vh;    
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size:cover;   
+}
+</style>
+<body>
+<h1>Welcome To Torry Harris Jewellery World</h1>
+    <form>
+    <div class="customer" th:onclick="'location.href=\''+@{/customerLogin}+'\''">
+        <div class="icon">
+            <img src="pictures/hand with cash2.png" alt="" width=150px height=150px>
+        </div>
+        <h3>I am a Customer</h3>
+    </div>
+    <div class="shopOwner"  th:onclick="'location.href=\''+@{/sellerLogin}+'\''">
+        <div class="icon">
+            <img src="pictures/jewelery box.png" alt="" width=150px height=150px>
+        </div>
+        <h3>I am a Seller</h3>
+
+    </div>
+    
+    </form>
+</body>
+</html>

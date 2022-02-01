@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/customer.css" />
+    <title>Online Jewellry Shop</title>
+  </head>
+  <style>
+    body {
+      background-image: url("pictures/bg3.jpg");
+      min-height: 100vh;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="htext"><h1>Welcome to Torry Harris Jewelleries </h1></div>
+      <div class="logout">
+        <a th:href = "@{/customerLogin}">Log Out</a>
+      </div>
+    </div>
+    <main>
+      <div class="topnav">
+         <a th:href = "@{/gold}">Gold</a>
+        <a th:href = "@{/silver}">Silver</a>
+        <a th:href = "@{/diamond}">Diamond</a>
+        <a th:href = "@{/diamond}">Platinum</a>
+        <a class="active" href="#">About</a>
+      </div>
+      <h2 class="about-header">About Us</h2>
+      <div class="about">
+        <h3>Our Team Menbers</h3>
+        <div class="peoples">
+          <div class="ankit">
+            <img src="pictures/male-icon.png" alt="" />
+            <label>Ankit Kumar</label>
+          </div>
+          
+          <div class="charan">
+            <img src="pictures/male-icon.png" alt="" />
+            <label>Charan</label>
+          </div>
+          <div class="shiva">
+            <img src="pictures/male-icon.png" alt="" />
+            <label>Shivakumar</label>
+          </div>
+          <div class="teju">
+            <img src="pictures/fem-icon.jpg" alt="" />
+            <label>Tejaswini</label>
+          </div>
+          <div class="vedha">
+            <img src="pictures/male-icon.png" alt="" />
+            <label>Vedhaviyasan</label>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

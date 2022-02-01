@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/list.css" >
+    <title>Listing Items</title>
+  </head>
+  <style>
+    body {
+      background-image: url("pictures/bg7.png");
+      min-height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+      <h1>Torry Harris Jewellers</h1>
+      <form th:action="@{/purchase}" method="POST">
+      <main>
+      <table>
+      <tr>
+      <thead>
+          <th> Jewel Id</th>
+          <th>Jewel Element</th>
+          <th>Jewel type</th>
+          <th>Price</th>
+          <th>Weight</th>
+          
+       </tr> 
+       </thead> 
+        <tbody>        
+            <tr th:each="jewels : ${jewelList}"> 
+            	<td th:text="${jewels.jewel_id}"class="border">Id</td>
+            	<td th:text="${jewels.jewel_metal}"class="border">Element</td>
+                <td th:text="${jewels.jewel_type}"class="border">Type</td>
+                <td th:text="${jewels.price}"class="border">price</td>
+                <td th:text="${jewels.weight}" class="border">weight</td>        
+               <td>
+                  <a class="buy"  th:href="@{/purchase(itemWeight=${jewels.weight},itemPrice=${jewels.price})}">&nbsp;&nbsp;Buy&nbsp;&nbsp;</a>
+                </td>
+             
+            </tr>
+        </tbody> 
+      </table>
+      <input class="button" type="button" value="Back" onclick="history.back()"> 
+      </main>
+      </form>
+      
+  </body>
+</html>

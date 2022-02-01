@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forget Password</title>
+  </head>
+  <style>
+    body {
+      background-image: url("pictures/bg6.jpg");
+      min-height: 100vh;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    form {
+      min-width: 80%;
+      min-height: 80vh;
+      background-color: #7070703f;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-evenly;
+    }
+    label {
+      color: #fcbe77;
+      font-weight: 700;
+    }
+    h1 {
+      
+      color: #fcbe77;
+      align-self: center;
+    }
+    .text {
+      margin-left: 0;
+      margin-right: 100px;
+      height: 2rem;
+      border: none;
+      border-radius: 15px;
+    }
+    .button {
+      margin-right: 10rem;
+      align-self: center;
+      height: 2rem;
+      background-color: #fcbe77;
+      border: none;
+      border-radius: 25px;
+    }
+  </style>
+  <body>
+    <form th:action="@{/changePassword}" method="POST">
+      <h1>Reset Your Password</h1>
+      <div>
+        <label>UserName :</label>
+        <input type="text" class="text" name="username" />
+      </div>
+      <div>
+        <label>Enter Mobile Number :</label>
+        <input type="text" class="text" />
+      </div>
+      <div>
+        <label>Enter New Password :</label> <input type="text" class="text" />
+      </div>
+
+      <div>
+        <label>Re Enter New Paasword :</label>
+        <input type="text" class="text" />
+      </div>
+      <div><input type="submit" value="Change Password" class="button" /></div>
+    </form>
+  </body>
+</html>

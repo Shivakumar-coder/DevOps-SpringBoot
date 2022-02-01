@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/customer.css">
+    <title>Online Jewellry Shop</title>
+</head>
+<style>
+    body{
+    background-image: url("pictures/bg3.jpg");
+    min-height: 100vh;
+    
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size:cover;   
+}
+</style>
+<body>
+    <div class="header">
+        <div class="htext"><h1>Welcome to Torry Harris Jewelleries  </h1></div>
+        <div class="logout">
+            <a th:href = "@{/customerLogin}">Log Out</a>
+        </div>
+       
+    </div>
+    <main>
+    <div class="topnav">
+        <a th:href = "@{/gold}">Gold</a>
+        <a th:href = "@{/silver}">Silver</a>
+        <a class="active" href="#">Diamond</a>
+        <a th:href = "@{/platinum}">Platinum</a>        
+        <a th:href = "@{/about}">About</a>
+      </div> 
+      <div class="category">
+        <h2>Shop By category</h2>
+        <div class="cat_content">
+          <div class="cat-item" th:onclick="'location.href=\''+@{/shop(type='diamond-ring')}+'\''">
+            <img src="pictures/products/diamond ring.png" alt="" />
+            <label>Ring</label>
+          </div>
+          <div class="cat-item" th:onclick="'location.href=\''+@{/shop(type='diamond-chain')}+'\''">
+            <img src="pictures/products/diamond chain.jpg" alt="" />
+            <label>necklace</label>
+          </div>
+          <div class="cat-item" th:onclick="'location.href=\''+@{/shop(type='diamond-earring')}+'\''">
+            <img src="pictures/products/diamond-earrings.jpg" alt="" />
+            <label>Earring</label>
+        </div>
+      </div>
+    </main>
+</body>
+</html>
